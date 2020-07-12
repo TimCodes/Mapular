@@ -12,7 +12,7 @@ import { loadModules } from 'esri-loader';
 @Component({
   selector: 'app-simpleesrimap',
   templateUrl: './simpleesrimap.component.html',
-  styleUrls: ['./simpleesrimap.component.css'],
+  styleUrls: ['./simpleesrimap.component.scss'],
 })
 export class SimpleesrimapComponent implements OnInit {
   // Private vars with default values
