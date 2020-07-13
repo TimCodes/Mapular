@@ -12,9 +12,10 @@ import { SimpleesrimapComponent } from './simpleesrimap/simpleesrimap.component'
 import { HelpComponent } from './help/help.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
+import { FeaturelayeresriComponent } from './featurelayeresri/featurelayeresri.component';
 
 @NgModule({
-  declarations: [AppComponent, MapComponent, HeroesComponent, HeroDetailComponent, MessagesComponent, SimpleesrimapComponent, HelpComponent],
+  declarations: [AppComponent, MapComponent, HeroesComponent, HeroDetailComponent, MessagesComponent, SimpleesrimapComponent, HelpComponent, FeaturelayeresriComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, AppMaterialModule],
   providers: [],
   bootstrap: [AppComponent],
