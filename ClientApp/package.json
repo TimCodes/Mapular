@@ -23,6 +23,7 @@
     "@angular/router": "~10.0.3",
     "esri-loader": "^2.15.0",
     "leaflet": "^1.6.0",
+    "proj4leaflet": "^1.0.2",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

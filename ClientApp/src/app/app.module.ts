@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
@@ -16,8 +16,25 @@ import { FeaturelayeresriComponent } from './featurelayeresri/featurelayeresri.c
 import { LeafletmapComponent } from './leafletmap/leafletmap.component';
 
 @NgModule({
-  declarations: [AppComponent, MapComponent, HeroesComponent, HeroDetailComponent, MessagesComponent, SimpleesrimapComponent, HelpComponent, FeaturelayeresriComponent, LeafletmapComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, BrowserAnimationsModule, AppMaterialModule],
+  declarations: [
+    AppComponent,
+    MapComponent,
+    HeroesComponent,
+    HeroDetailComponent,
+    MessagesComponent,
+    SimpleesrimapComponent,
+    HelpComponent,
+    FeaturelayeresriComponent,
+    LeafletmapComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    AppMaterialModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

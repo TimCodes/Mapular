@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { createPopUpContent } from './helpers';
+
 import * as L from 'leaflet';
 @Component({
   selector: 'app-leafletmap',
@@ -7,11 +10,20 @@ import * as L from 'leaflet';
 })
 export class LeafletmapComponent implements OnInit {
   private map;
-  constructor() {}
+  public forecasts: any;
 
-  ngOnInit(): void {
-    this.initMap();
+  constructor(http: HttpClient) {
+    http.get('https://localhost:5001/api/SampleData/sites').subscribe(
+      (result) => {
+        console.log(result);
+        this.forecasts = result;
+        this.initMap();
+      },
+      (error) => console.error(error)
+    );
   }
+
+  ngOnInit(): void {}
 
   private initMap(): void {
     const tiles = L.tileLayer(
@@ -24,56 +36,26 @@ export class LeafletmapComponent implements OnInit {
     );
 
     this.map = L.map('map', {
-      center: [39.8282, -98.5795],
-      zoom: 3,
+      center: [42.62222, -112.03444],
+      zoom: 17,
     });
 
     tiles.addTo(this.map);
 
-    var states = [
-      {
-        type: 'Feature',
-        properties: { party: 'Republican' },
-        geometry: {
-          type: 'Polygon',
-          coordinates: [
-            [
-              [-104.05, 48.99],
-              [-97.22, 48.98],
-              [-96.58, 45.94],
-              [-104.03, 45.94],
-              [-104.05, 48.99],
-            ],
-          ],
-        },
-      },
-      {
-        type: 'Feature',
-        properties: { party: 'Democrat' },
-        geometry: {
-          type: 'Polygon',
-          coordinates: [
-            [
-              [-109.05, 41.0],
-              [-102.06, 40.99],
-              [-102.03, 36.99],
-              [-109.04, 36.99],
-              [-109.05, 41.0],
-            ],
-          ],
-        },
-      },
-    ];
-
-    L.geoJSON(states, {
+    L.geoJSON(this.forecasts, {
       style: function (feature) {
-        switch (feature.properties.party) {
-          case 'Republican':
+        switch (feature.properties.status) {
+          case 'reserved':
             return { color: '#ff0000' };
-          case 'Democrat':
+          case 'open':
             return { color: '#0000ff' };
         }
       },
-    }).addTo(this.map);
+    })
+      .bindPopup(function (layer) {
+        let { siteId, price, status } = layer.feature.properties;
+        return createPopUpContent(siteId, status, price);
+      })
+      .addTo(this.map);
   }
 }
