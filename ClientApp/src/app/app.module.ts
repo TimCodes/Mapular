@@ -5,9 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { MessagesComponent } from './messages/messages.component';
 import { SimpleesrimapComponent } from './simpleesrimap/simpleesrimap.component';
 import { HelpComponent } from './help/help.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,9 +17,6 @@ import { LandingpageComponent } from './landingpage/landingpage.component';
   declarations: [
     AppComponent,
     MapComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    MessagesComponent,
     SimpleesrimapComponent,
     HelpComponent,
     FeaturelayeresriComponent,
