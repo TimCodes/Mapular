@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~10.0.3",
     "@angular/platform-browser-dynamic": "~10.0.3",
     "@angular/router": "~10.0.3",
+    "component": "^1.1.0",
     "esri-loader": "^2.15.0",
     "leaflet": "^1.6.0",
     "proj4leaflet": "^1.0.2",

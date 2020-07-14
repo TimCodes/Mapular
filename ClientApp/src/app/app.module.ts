@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
 import { FeaturelayeresriComponent } from './featurelayeresri/featurelayeresri.component';
 import { LeafletmapComponent } from './leafletmap/leafletmap.component';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LeafletmapComponent } from './leafletmap/leafletmap.component';
     HelpComponent,
     FeaturelayeresriComponent,
     LeafletmapComponent,
+    LandingpageComponent,
   ],
   imports: [
     BrowserModule,

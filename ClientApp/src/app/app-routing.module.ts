@@ -8,14 +8,16 @@ import { FeaturelayeresriComponent } from './featurelayeresri/featurelayeresri.c
 import { LeafletmapComponent } from './leafletmap/leafletmap.component';
 import { HelpComponent } from './help/help.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 
 const routes: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: 'simpleesrimap', component: SimpleesrimapComponent },
+  { path: 'home', component: LandingpageComponent },
   { path: 'featurelayer', component: FeaturelayeresriComponent },
   { path: 'leafletmap', component: LeafletmapComponent },
   { path: 'help', component: HelpComponent },
-  { path: '', redirectTo: '/leafletmap', pathMatch: 'full' },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({
