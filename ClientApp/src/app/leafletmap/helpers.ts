@@ -1,7 +1,7 @@
 export function createPopUpContent(title, status, price) {
   return `<mat-card class="example-card">
     <mat-card-header>
-      <mat-card-subtitle>${title}</mat-card-subtitle>
+      <mat-card-subtitle>Site Number: ${title}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <p>

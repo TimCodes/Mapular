@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'featurelayer', component: FeaturelayeresriComponent },
   { path: 'leafletmap', component: LeafletmapComponent },
   { path: 'help', component: HelpComponent },
-  { path: '', redirectTo: '/map', pathMatch: 'full' },
+  { path: '', redirectTo: '/leafletmap', pathMatch: 'full' },
 ];
 
 @NgModule({

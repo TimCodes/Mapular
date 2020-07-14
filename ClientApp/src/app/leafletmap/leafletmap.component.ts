@@ -13,7 +13,7 @@ export class LeafletmapComponent implements OnInit {
   public forecasts: any;
 
   constructor(http: HttpClient) {
-    http.get('https://localhost:5001/api/SampleData/sites').subscribe(
+    http.get('api/SampleData/sites').subscribe(
       (result) => {
         console.log(result);
         this.forecasts = result;
@@ -29,7 +29,7 @@ export class LeafletmapComponent implements OnInit {
     const tiles = L.tileLayer(
       'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       {
-        maxZoom: 19,
+        maxZoom: 23,
         attribution:
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
       }
