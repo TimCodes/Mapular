@@ -26,6 +26,7 @@ export class LeafletmapComponent implements OnInit {
   ngOnInit(): void {}
 
   private initMap(): void {
+    zxtg;
     const tiles = L.tileLayer(
       'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
       {

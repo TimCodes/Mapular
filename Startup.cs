@@ -20,8 +20,10 @@ namespace server {
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles (configuration => {
-                configuration.RootPath = "ClientApp/dist/client";
+                configuration.RootPath = "ClientApp/dist";
             });
+            //change to this when publshing
+            //ClientApp/dist/client
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
