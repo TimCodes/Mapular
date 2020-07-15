@@ -22,7 +22,7 @@ namespace server {
             services.AddSpaStaticFiles (configuration => {
                 configuration.RootPath = "ClientApp/dist";
             });
-            //change to this when publshing
+            //change to this when publshingw   
             //ClientApp/dist/client
         }
 
